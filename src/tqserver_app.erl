@@ -21,7 +21,7 @@
 start(_Type, _StartArgs) ->
     ok = validate_env(),
     {ok, Port} = application:get_env(listen_port),
-    {ok, LSock} = gen_tcp:listen(Port, []),
+    {ok, LSock} = gen_tcp:listen(Port, [{reuseaddr, true}]),
     case tqserver_sup:start_link(LSock) of
 	{ok, Pid} ->
             tqserver_sup:start_child(),
