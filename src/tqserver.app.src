@@ -1,0 +1,18 @@
+%%% -*- mode: Erlang -*-
+%%%-------------------------------------------------------------------------
+%%% @author Tim Stewart <tim@stoo.org>
+%%%  [http://www.stoo.org]
+%%% @copyright 2010 Stoo Research
+%%% @end
+%%%-------------------------------------------------------------------------
+
+{application, tqserver,
+ [{description, "Tim's Queue Server"},
+  {vsn, "0.1"},
+  {modules, [tqserver_app,
+	     tqserver_sup]},
+  {registered, [tqserver_sup]},
+  {applications, [kernel, stdlib]},
+  {mod, {tqserver_app, []}},
+  {env, []}
+ ]}.
