@@ -1,6 +1,9 @@
 tqserver (Tim's Queue Server)
 =============================
 
-A server that provides a queue.
+A server that provides a queue, based on Tim's Queue at:
 
-There's not much to say, yet.
+    git://github.com/timclassic/tqueue.git
+
+Note that tqueue will accept arbitrary Erlang terms into the queue,
+but the queue server treats everything as strings.
